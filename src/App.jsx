@@ -68,6 +68,7 @@ export default function App() {
           <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
             Welcome to Task Management System!
           </h1>
+          <h2>Manage Tasks</h2>
           <p className="text-slate-400 text-sm mt-1">
             Organize your daily priorities effortlessly.
           </p>
