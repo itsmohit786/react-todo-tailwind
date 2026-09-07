@@ -32,6 +32,7 @@ export default function App() {
   const [text, setText] = useState("");
   const [category, setCategory] = useState("Work");
   const [filter, setFilter] = useState("all");
+  const [alert, setAlert] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("app_todos", JSON.stringify(todos));
@@ -42,6 +43,7 @@ export default function App() {
     if (!text.trim()) return;
     setTodos([...todos, { id: Date.now(), text, category, completed: false }]);
     setText("");
+    setAlert(true);
   };
 
   const toggleTodo = (id) => {
@@ -66,7 +68,7 @@ export default function App() {
         {/* Header */}
         <div className="p-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-            Welcome to Task Management System!
+            TMS
           </h1>
           <h2>Manage Tasks</h2>
           <p className="text-slate-400 text-sm mt-1">
@@ -158,7 +160,7 @@ export default function App() {
                   </span>
                 </div>
                 <div className="flex items-center gap-3 shrink-0">
-                  <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded border border-slate-700">
+                  <span className="text-[10px] bg-red-800 text-red-400 px-2 py-0.5 rounded border border-red-700">
                     {todo.category}
                   </span>
                   <button
