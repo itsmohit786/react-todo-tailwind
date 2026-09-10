@@ -68,7 +68,7 @@ export default function App() {
         {/* Header */}
         <div className="p-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-            TMS
+            Task Mgt System
           </h1>
           <h2>Manage Tasks</h2>
           <p className="text-slate-400 text-sm mt-1">
